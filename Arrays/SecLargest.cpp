@@ -48,3 +48,48 @@ int main()
         cout<<ans;
     }
 }
+
+/*
+             BRUTE FORCE
+
+#include<bits/stdc++.h>
+#include<climits>
+using namespace std;
+
+
+int secLargest( int arr[], int n)
+{
+    sort( arr, arr+n);
+    int Smaxi = INT_MIN; 
+    int maxi = arr[n-1];
+    for(int i=n-2 ; i>=0 ; i--)
+    {
+        if(arr[i] != maxi)
+        {
+            Smaxi = arr[i];
+            break;
+        }
+    }
+    return Smaxi;
+}
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while( t-- )
+    {
+        int n;
+        cin>>n;
+        int arr[n];
+        for(int i=0 ; i<n ; i++)
+        {
+            cin>>arr[i];
+        }
+        // Function Calling
+        int ans = secLargest(arr, n);
+        cout<<ans;
+    }
+}
+*/
